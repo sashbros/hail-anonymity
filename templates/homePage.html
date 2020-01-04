@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'style.css')}}" >
+  </head>
+  <body>
+    <script type="text/javascript">
+      
+      
+    </script>
+
+    <div id="searchBox">
+      {% for message in get_flashed_messages() %}
+        <div class="msg">
+          {{message}}
+        </div>
+      {% endfor %}
+      <div>
+        <h1>BE<span id="bookFont"> YOUR </span> OWN <span id="bookFont"> GOD </span></h1>
+      </div>
+      <div id="info">
+        Help yourselves and others !!<br><br>
+        Start helping to get help !<br><br>
+      </div>
+      <div id="textArea">
+        <form action="http://127.0.0.1:3000" method="POST">
+          <br>
+          <textarea minlength="3" name="comment" placeholder="Enter Text Here.." required></textarea>
+          <input id="postButton" type="submit" name="" value="POST">
+        </form>
+      </div>
+    </div>
+    
+    <div class="show">
+      {% for item in data %}
+        <div id="auto" class="disPost">{{item[0]}}</div>
+      {% endfor %}
+    </div>
+    
+  </body>
+</html>
