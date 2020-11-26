@@ -1,17 +1,17 @@
 from flask import Flask, render_template, request, flash
 import mysql.connector
 
-# mydb = mysql.connector.connect(host="sashbros.mysql.pythonanywhere-services.com",
-#                                 user="sashbros",
-#                                 password="SARVA1992",
-#                                 database="sashbros$jn",
-#                                 auth_plugin='mysql_native_password')
+# mydb = mysql.connector.connect(host="",
+#                                 user="",
+#                                 password="",
+#                                 database="",
+#                                 auth_plugin='')
 
-mydb = mysql.connector.connect(host="localhost",
-                                user="root",
-                                password="21072000",
-                                database="jn",
-                                auth_plugin='mysql_native_password')
+mydb = mysql.connector.connect(host="",
+                                user="",
+                                password="",
+                                database="",
+                                auth_plugin='')
 mycursor = mydb.cursor()
 
 # mycursor.execute("create table posts(p_id int(5) primary key, p_des varchar(200))")
